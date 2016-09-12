@@ -36,25 +36,7 @@ namespace Converter_1_.VIew
             InitializeComponent();
         }
 
-        private void RadioHexOutput_Checked(object sender, RoutedEventArgs e)
-        {
-            OutputConvertModeSwitcherViewModel.ChangeOutputModeToHex();
-        }
-
-        private void RadioOctalOutput_Checked(object sender, RoutedEventArgs e)
-        {
-            OutputConvertModeSwitcherViewModel.ChahgeOutputModeToOctal();
-        }
-
-        private void RadioBinaryOutput_Checked(object sender, RoutedEventArgs e)
-        {
-            OutputConvertModeSwitcherViewModel.ChahgeOutputModeToBinary();
-        }
-
-        private void RadioDecimalOutput_Checked(object sender, RoutedEventArgs e)
-        {
-            OutputConvertModeSwitcherViewModel.ChangeOutputModeToDecimal();
-        }
+        
 
         
     }

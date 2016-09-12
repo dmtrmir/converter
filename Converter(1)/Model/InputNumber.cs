@@ -8,14 +8,7 @@ namespace Converter_1_.Model
         private string _valueToConvert;
         public string ValueToConvert 
         {
-            get
-            {
-                if (_valueToConvert == null)
-                {
-                    _valueToConvert = "";
-                }
-                return _valueToConvert;
-            }
+            get { return _valueToConvert ?? (_valueToConvert = ""); }
 
             set
             {

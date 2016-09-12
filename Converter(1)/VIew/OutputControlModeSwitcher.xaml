@@ -15,10 +15,10 @@
     <Grid>
         <GroupBox Name="GroupInSystemChoose"  Margin ="5" BorderBrush="Black" Grid.Column="1" Grid.Row="0" Header ="Система Вывода:" FontSize ="15" FontWeight ="Bold">
             <StackPanel Margin ="2">
-                <RadioButton Name = "RadioDecimalOutput" Style ="{StaticResource RadioButtonStyle}"  Checked="RadioDecimalOutput_Checked" >Десятичная</RadioButton>
-                <RadioButton Name = "RadioBinaryOutput" Style ="{StaticResource RadioButtonStyle}"  Checked="RadioBinaryOutput_Checked" >Двоичная</RadioButton>
-                <RadioButton Name = "RadioOctalOutput" Style ="{StaticResource RadioButtonStyle}" Checked="RadioOctalOutput_Checked" >Восьмеричная</RadioButton>
-                <RadioButton Name = "RadioHexOutput" Style ="{StaticResource RadioButtonStyle}" Checked="RadioHexOutput_Checked" >Шестнадцатеричная</RadioButton>
+                <RadioButton Name = "RadioDecimalOutput" Style ="{StaticResource RadioButtonStyle}" >Десятичная</RadioButton>
+                <RadioButton Name = "RadioBinaryOutput" Style ="{StaticResource RadioButtonStyle}" >Двоичная</RadioButton>
+                <RadioButton Name = "RadioOctalOutput" Style ="{StaticResource RadioButtonStyle}" >Восьмеричная</RadioButton>
+                <RadioButton Name = "RadioHexOutput" Style ="{StaticResource RadioButtonStyle}" >Шестнадцатеричная</RadioButton>
             </StackPanel>
         </GroupBox>
     </Grid>
