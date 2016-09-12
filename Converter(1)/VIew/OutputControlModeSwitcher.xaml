@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="Converter_1_.VIew.OutputControlModeSwitcher"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+    <Style x:Key ="RadioButtonStyle">
+        <Setter Property ="RadioButton.FontSize" Value ="15"/>
+        <Setter Property ="RadioButton.FontWeight" Value ="Bold"/>
+        <Setter Property ="RadioButton.Margin" Value ="0,5,0,5"/>
+    </Style>
+    </UserControl.Resources>
+    <Grid>
+        <GroupBox Name="GroupInSystemChoose"  Margin ="5" BorderBrush="Black" Grid.Column="1" Grid.Row="0" Header ="Система Вывода:" FontSize ="15" FontWeight ="Bold">
+            <StackPanel Margin ="2">
+                <RadioButton Name = "RadioDecimalOutput" Style ="{StaticResource RadioButtonStyle}"  Checked="RadioDecimalOutput_Checked" >Десятичная</RadioButton>
+                <RadioButton Name = "RadioBinaryOutput" Style ="{StaticResource RadioButtonStyle}"  Checked="RadioBinaryOutput_Checked" >Двоичная</RadioButton>
+                <RadioButton Name = "RadioOctalOutput" Style ="{StaticResource RadioButtonStyle}" Checked="RadioOctalOutput_Checked" >Восьмеричная</RadioButton>
+                <RadioButton Name = "RadioHexOutput" Style ="{StaticResource RadioButtonStyle}" Checked="RadioHexOutput_Checked" >Шестнадцатеричная</RadioButton>
+            </StackPanel>
+        </GroupBox>
+    </Grid>
+</UserControl>

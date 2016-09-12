@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="Converter_1_.VIew.InOutPanelView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:viewModel ="clr-namespace:Converter_1_.VIewModel"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <Style x:Key ="GroupBoxStyle">
+            <Setter Property ="GroupBox.BorderBrush" Value ="Black"/>
+            <Setter Property ="GroupBox.FontSize" Value ="20"/>
+            <Setter Property ="GroupBox.FontWeight" Value ="Bold"/>
+        </Style>
+        
+        </UserControl.Resources>
+    <UserControl.DataContext>
+        <viewModel:ButtonPanelVieModel></viewModel:ButtonPanelVieModel>
+    </UserControl.DataContext>
+    <Grid Name ="InOutModule" Margin="5">
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <GroupBox  Name="GroupInputPanel" Header ="ВВОД"  Style ="{StaticResource GroupBoxStyle}" Grid.Row="0">
+            <Label Name="LabelInput" FontSize="28" FontWeight="Bold" HorizontalAlignment="Right" VerticalAlignment="Center" DataContext="{Binding NumberToShwow, UpdateSourceTrigger=PropertyChanged}"></Label>
+        </GroupBox>
+        <GroupBox  Name="GroupOutputPanel" Header ="ВЫВОД"  Style ="{StaticResource GroupBoxStyle}" Grid.Row="1" >
+            <Label Name="LabelOutput" FontSize="28" FontWeight="Bold" HorizontalAlignment="Right"></Label>
+        </GroupBox>
+     </Grid>
+</UserControl>

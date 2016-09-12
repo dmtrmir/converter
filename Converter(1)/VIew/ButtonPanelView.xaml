@@ -1,0 +1,81 @@
+﻿<UserControl x:Class="Converter_1_.VIew.ButtonPanelView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local ="clr-namespace:Converter_1_.VIewModel"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <Style x:Key ="RegButtonStyle">
+            <Setter Property ="Button.MinHeight" Value="20"/>
+            <Setter Property ="Button.MinWidth" Value ="25"/>
+            <Setter Property ="Button.Margin" Value ="2"/>
+            <Setter Property ="Button.BorderBrush" Value ="Black"/>
+            <Setter Property ="Button.FontSize" Value ="20"/>
+            <Setter Property ="Button.FontWeight" Value ="Bold"/>
+       </Style>
+    </UserControl.Resources>
+    <UserControl.DataContext>
+            <local:ButtonPanelVieModel></local:ButtonPanelVieModel>
+    </UserControl.DataContext>
+    <!--Button Panel Grid-->
+    <Grid Name="ButtonPanelModule" Margin="15" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <!--Numeric & funcrional  bar-->
+        <Grid Name="NumPanel"  Grid.Column ="0" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Button Name = "NumButton7" Style = "{StaticResource RegButtonStyle}" Grid.Row="0" Grid.Column="0" Content="7" Command ="{Binding AddSymbol7}"></Button>
+            <Button Name = "NumButton8" Style = "{StaticResource RegButtonStyle}" Grid.Row="0" Grid.Column="1" Content="8" Command ="{Binding AddSymbol8}"></Button>
+            <Button Name = "NumButton9" Style = "{StaticResource RegButtonStyle}" Grid.Row="0" Grid.Column="2" Content="9" Command ="{Binding AddSymbol9}"></Button>
+            <Button Name = "NumButton4" Style = "{StaticResource RegButtonStyle}" Grid.Row="1" Grid.Column="0" Content="4" Command ="{Binding AddSymbol4}"></Button>
+            <Button Name = "NumButton5" Style = "{StaticResource RegButtonStyle}" Grid.Row="1" Grid.Column="1" Content="5" Command ="{Binding AddSymbol5}"></Button>
+            <Button Name = "NumButton6" Style = "{StaticResource RegButtonStyle}" Grid.Row="1" Grid.Column="2" Content="6" Command ="{Binding AddSymbol6}"></Button>
+            <Button Name = "NumButton1" Style = "{StaticResource RegButtonStyle}" Grid.Row="2" Grid.Column="0" Content="1" Command ="{Binding AddSymbol1}"></Button>
+            <Button Name = "NumButton2" Style = "{StaticResource RegButtonStyle}" Grid.Row="2" Grid.Column="1" Content="2" Command ="{Binding AddSymbol2}"></Button>
+            <Button Name = "NumButton3" Style = "{StaticResource RegButtonStyle}" Grid.Row="2" Grid.Column="2" Content="3" Command ="{Binding AddSymbol3}"></Button>
+            <Button Name = "ClearButton" Style = "{StaticResource RegButtonStyle}" Grid.Row="3" Grid.Column="0" Content="CLR" Command="{Binding ClearCommand}" ></Button>
+            <Button Name = "NumButton0" Style = "{StaticResource RegButtonStyle}" Grid.Row="3" Grid.Column="1" Content="0" Command="{Binding AddSymbol0}" ></Button>
+            <Button Name = "BackSpaceButton" Style = "{StaticResource RegButtonStyle}" Grid.Row="3" Grid.Column="2" Content="←" Command="{Binding BackspaceCommand}"></Button>
+        </Grid>
+        <!--Character buttons Bar-->
+        <Grid Name="CharPanel"  Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="3*"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" Name ="CharKeys">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Button Name = "LetterButtonA" Style = "{StaticResource RegButtonStyle}" Grid.Row="0" Grid.Column="0" Content="A" Command="{Binding AddLetterA}"></Button>
+                <Button Name = "LetterButtonB" Style = "{StaticResource RegButtonStyle}" Grid.Row="0" Grid.Column="1" Content="B" Command="{Binding AddLetterB}" ></Button>
+                <Button Name = "LetterButtonC" Style = "{StaticResource RegButtonStyle}" Grid.Row="1" Grid.Column="0" Content="C" Command="{Binding AddLetterC}"></Button>
+                <Button Name = "LetterButtonD" Style = "{StaticResource RegButtonStyle}" Grid.Row="1" Grid.Column="1" Content="D" Command="{Binding AddLetterD}"></Button>
+                <Button Name = "LetterButtonE" Style = "{StaticResource RegButtonStyle}" Grid.Row="2" Grid.Column="0" Content="E" Command="{Binding AddLetterE}"></Button>
+                <Button Name = "LetterButtonF" Style = "{StaticResource RegButtonStyle}" Grid.Row="2" Grid.Column="1" Content="F" Command="{Binding AddLetterF}"></Button>
+            </Grid>
+            <Button Name="EqualButton" Style = "{StaticResource RegButtonStyle}" Grid.Row="1" Content="=" Command="{Binding CalculateCommand}" ></Button>
+        </Grid>
+    </Grid>
+</UserControl>
